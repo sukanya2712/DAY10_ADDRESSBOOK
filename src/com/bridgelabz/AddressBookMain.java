@@ -34,4 +34,52 @@ public class AddressBookMain {
         contact.state = state;
     }
 
+
+    public void deleteStockByName(String name) {
+        boolean found = false;
+        for (Stock stock : stocks) {
+            if (stock.getName().equals(name)) {
+                stocks.remove(stock);
+                found = true;
+                break;
+            }
+        }
+        if (found) {
+            System.out.println("Stock with name \"" + name + "\" deleted successfully.");
+        } else {
+            System.out.println("Stock with name \"" + name + "\" not found.");
+        }
+    }
+
+    public void deleteStockByName(String name) {
+        boolean found = false;
+        for (Stock stock : stocks) {
+            if (stock.getName().equals(name)) {
+                stocks.remove(stock);
+                found = true;
+                break;
+            }
+        }
+        if (found) {
+            System.out.println("Stock with name \"" + name + "\" deleted successfully.");
+        } else {
+            System.out.println("Stock with name \"" + name + "\" not found.");
+        }
+    }
+
+    public void deleteAddress(String name){
+        boolean found = false;
+        for (Contact contact : contacts) {
+            if (contact.FirstName.equals(name)) {
+                contacts.remove(contact);
+                found = true;
+                break;
+            }
+        }
+        if (found) {
+            System.out.println("contact with name " + name + "deleted successfully.");
+        } else {
+            System.out.println("contact with name " + name + " not found.");
+        }
+    }
 }

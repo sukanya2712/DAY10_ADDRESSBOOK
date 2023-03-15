@@ -40,6 +40,11 @@ public class AddressBook {
 
             addressCon.editContact(index, firstname, lastname, state);
             addressCon.printaddressBOOK();
+
+            System.out.println("enter name to delete contact : ");
+            String nametodelete=sc.next();
+            addressCon.deleteAddress(String nametodelete);
+            addressCon.printaddressBOOK();
         }
 
 }
