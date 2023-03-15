@@ -3,37 +3,24 @@ package com.bridgelabz;
 public class AddressBook {
     public static void main(String[] args) {
         System.out.println("Welcome to addressbook");
-        Contact contact = new Contact();
-        public void addContact() {
-            Scanner scanner = new Scanner(System.in);
-            System.out.println("Enter the values of contact");
-            System.out.println("Enter the First Name");
-            String firstName = scanner.next();
-            System.out.println("Enter the Last Name");
-            String lastName = scanner.next();
-            System.out.println("Enter the Address");
-            String address = scanner.next();
-            System.out.println("Enter the City");
-            String city = scanner.next();
-            System.out.println("Enter the State");
-            String state = scanner.next();
-            System.out.println("Enter the zip");
-            String zip = scanner.next();
-            System.out.println("Enter the Phone Number");
-            String phoneNumber = scanner.next();
-            contact.setFirstName(firstName);
-            contact.setLastName(lastName);
-            contact.setAddress(address);
-            contact.setCity(city);
-            contact.setState(state);
-            contact.setZip(zip);
-            contact.setPhoneNumber(phoneNumber);
+        public static void main(String[] args){
+            Scanner sc = new Scanner(System.in);
+
+            System.out.print("Enter the number of contacts u want to add : ");
+            int numContacts = scanner.nextInt();
+
+            AddressBookMain addressCon = new AddressBookMain();
+            for (int i = 1; i <= numContacts; i++) {
+                System.out.print("Enter First Name: ");
+                String firstName = sc.next();
+                System.out.print("Enter Last Name: ");
+               String LastName = sc.next();
+                System.out.print("Enter State: ");
+                String State = sc.next();
+
+               Contact contact = new Contact(firstName,LastName,State);
+                addressCon.addContact(contact);
+            }
+              addressCon.printaddressBOOK();
         }
-        @Override
-        public String toString() {
-            return "AddressBook{" +
-                    "contact=" + contact +
-                    '}';
-        }
-    }
 }
