@@ -26,4 +26,12 @@ public class AddressBookMain {
         }
 
     }
+
+    public void editStock(int index, String firstname,String lastname, String state) {
+        Contact contact = contacts.get(index);
+        contact.firstName = firstname;
+        contact.lastName = lastname;
+        contact.state = state;
+    }
+
 }

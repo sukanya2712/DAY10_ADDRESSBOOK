@@ -26,6 +26,20 @@ public class AddressBook {
                 addressCon.addContact(contact);
             }
               addressCon.printaddressBOOK();
+
+            System.out.println("Enter the index of the contact to edit: ");
+            int index = sc.nextInt();
+
+            System.out.println("Enter the new details of the contact:");
+            System.out.print("Name: ");
+            String firstname = sc.next();
+            System.out.print("Number of shares: ");
+            String lastname = sc.next();
+            System.out.print("Enter state: ");
+            String state = scanner.next();
+
+            addressCon.editContact(index, firstname, lastname, state);
+            addressCon.printaddressBOOK();
         }
 
 }
