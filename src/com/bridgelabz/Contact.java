@@ -28,5 +28,8 @@ public class Contact {
     public void setState(String state) {
         this.state = state;
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> UC2_ADDNEWCONTACT
 }
